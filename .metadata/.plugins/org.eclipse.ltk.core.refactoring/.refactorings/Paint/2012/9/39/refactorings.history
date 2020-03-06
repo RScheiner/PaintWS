@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 7 elements to &apos;Paint/src&apos;&#x0D;&#x0A;- Original project: &apos;Paint&apos;&#x0D;&#x0A;- Destination element: &apos;Paint/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Janela.java&#x0D;&#x0A;     Linha.java&#x0D;&#x0A;     Circulo.java&#x0D;&#x0A;     Editor.java&#x0D;&#x0A;     Elipse.java&#x0D;&#x0A;     Figura.java&#x0D;&#x0A;     Ponto.java&#x0D;&#x0A;- Update references to refactored element" description="Move files" destination="/src" element1="Janela.java" element2="Linha.java" element3="Circulo.java" element4="Editor.java" element5="Elipse.java" element6="Figura.java" element7="Ponto.java" files="7" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1348351218062" units="0" version="1.0"/>
+</session>

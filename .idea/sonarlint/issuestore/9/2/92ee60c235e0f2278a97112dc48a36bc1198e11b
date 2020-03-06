@@ -1,0 +1,29 @@
+
+C
+java:S2185B"&Remove this silly call to "Math.round"(â²Ÿ 8Õß„êŠ.
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
+0
+java:S1220""Move this file to a named package.
+]	java:S1254"<This block of commented-out lines of code should be removed.(ØÄ¨žùÿÿÿÿ8ï½ûèŠ.
+9
+java:S1116B"Remove this empty statement.(â²Ÿ 8Õß„êŠ.
+C
+java:S2185E"&Remove this silly call to "Math.round"(¨¨ƒ8ÃƒÂçŠ.
+H
+java:S2185F"&Remove this silly call to "Math.round"(ŠÙý øÿÿÿÿ8ÃƒÂçŠ.
+<
+java:S2185G"&Remove this silly call to "Math.round"(Á¨ä¤
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+C
+java:S2185A"&Remove this silly call to "Math.round"(Á¨ä¤8Õß„êŠ.
+A
+java:S2185H"&Remove this silly call to "Math.round"(…ÁŽÖÿÿÿÿÿ
+9
+java:S2225M"Return empty string instead.(¥¹ï8ðÄ³ÞŠ.
+]	java:S125;"<This block of commented-out lines of code should be removed.(ÈÌßšùÿÿÿÿ8€¤ƒéŠ.
+H
+java:S2185@"&Remove this silly call to "Math.round"(ŠÙý øÿÿÿÿ8Õß„êŠ.
+C
+java:S2185?"&Remove this silly call to "Math.round"(€âî³8Õß„êŠ.
