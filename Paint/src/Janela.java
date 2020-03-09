@@ -9,19 +9,19 @@ public class Janela extends JFrame
 {
     protected static final long serialVersionUID = 1L;
 
-    protected JButton btnPonto     = new JButton ("Ponto"),
-                      btnLinha     = new JButton ("Linha"),
-                      btnCirculo   = new JButton ("Circulo"),
-                      btnElipse    = new JButton ("Elipse"),
-                      btnRetangulo = new JButton("Retangulo"),
-                      btnQuadrado  = new JButton("Quadrado"),
-                      btnPoligono  = new JButton("Poligono"),
+    protected JButton btnPonto           = new JButton ("Ponto"),
+                      btnLinha           = new JButton ("Linha"),
+                      btnCirculo         = new JButton ("Circulo"),
+                      btnElipse          = new JButton ("Elipse"),
+                      btnRetangulo       = new JButton("Retangulo"),
+                      btnQuadrado        = new JButton("Quadrado"),
+                      btnPoligono        = new JButton("Poligono"),
                       btnCorContorno     = new JButton ("Contorno"),
-                      btnCorCentro = new JButton("Preenchimento"),
-                      btnAbrir     = new JButton ("Abrir"),
-                      btnSalvar    = new JButton ("Salvar"),
-                      btnApagar    = new JButton ("Apagar"),
-                      btnSair      = new JButton ("Sair");
+                      btnCorCentro       = new JButton("Preenchimento"),
+                      btnAbrir           = new JButton ("Abrir"),
+                      btnSalvar          = new JButton ("Salvar"),
+                      btnApagar          = new JButton ("Apagar"),
+                      btnSair            = new JButton ("Sair");
 
     protected MeuJPanel pnlDesenho = new MeuJPanel ();
     
@@ -29,7 +29,7 @@ public class Janela extends JFrame
                      statusBar2 = new JLabel ("Coordenada:");
 
     protected boolean esperaPonto, esperaInicioReta, esperaFimReta, esperaP1Circulo, esperaP2Circulo,
-                      esperaP1Elipse,esperaP2Elipse;
+                      esperaP1Elipse,esperaP2Elipse, esperaP1Retangulo, esperaP2Retangulo;
 
     protected Color corContornoAtual = Color.BLACK;
     protected Color corPreenchimentoAtual =  null;
@@ -170,12 +170,13 @@ public class Janela extends JFrame
         }
 
         //Açao dos botoes
-        btnPonto.addActionListener (new DesenhoDePonto());
-        btnLinha.addActionListener (new DesenhoDeReta ());
-        btnCirculo.addActionListener(new DesenhoDeCirculo());
-        btnElipse.addActionListener(new DesenhoDeElipse());
+        btnPonto.addActionListener      (new DesenhoDePonto());
+        btnLinha.addActionListener      (new DesenhoDeReta ());
+        btnCirculo.addActionListener    (new DesenhoDeCirculo());
+        btnElipse.addActionListener     (new DesenhoDeElipse());
+        btnRetangulo.addActionListener   (new DesenhoDeRetangulo());
         btnCorContorno.addActionListener(new PainelDeCores());
-        btnCorCentro.addActionListener(new PainelDeCoresPreenchimento());
+        btnCorCentro.addActionListener  (new PainelDeCoresPreenchimento());
 
 
         JPanel     pnlBotoes = new JPanel();
@@ -284,6 +285,20 @@ public class Janela extends JFrame
                                     figuras.add(new Elipse(p1.getX(),p1.getY(),e.getX(),e.getY(), corContornoAtual,corPreenchimentoAtual));
                                     figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
                                     statusBar1.setText("Mensagem:");
+                                }else{
+                                    if(esperaP1Retangulo){
+                                        esperaP1Retangulo = false;
+                                        esperaP2Retangulo = true;
+                                        p1 =  new Ponto(e.getX(),e.getY(), corContornoAtual);
+                                        statusBar1.setText("Mensagem: Clique no ponto final do Quadrado");
+                                    }else{
+                                        if(esperaP2Retangulo){
+                                            esperaP2Retangulo = false;
+                                            figuras.add(new Retangulo(p1.getX(),p1.getY(),e.getX(),e.getY(),corContornoAtual,corPreenchimentoAtual));
+                                            figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
+                                            statusBar1.setText("Mensagem:");
+                                        }
+                                    }
                                 }
                             }
         }
@@ -371,6 +386,25 @@ public class Janela extends JFrame
             esperaP2Elipse   = false;
 
             statusBar1.setText("Mensagem: clique o ponto inicial da Elipse");
+        }
+    }
+
+    protected  class DesenhoDeRetangulo implements  ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            esperaPonto      = false;
+            esperaInicioReta = false;
+            esperaFimReta    = false;
+            esperaP1Circulo  = false;
+            esperaP2Circulo  = false;
+            esperaP1Elipse   = false;
+            esperaP2Elipse   = false;
+
+            esperaP1Retangulo = true;
+            esperaP2Retangulo = false;
+
+            statusBar1.setText("Mensagem: clique o ponto inicial do Quadrado");
         }
     }
 
