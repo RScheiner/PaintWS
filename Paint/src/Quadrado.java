@@ -1,23 +1,20 @@
 import java.awt.*;
 import java.util.StringTokenizer;
 
-
-
-public class Retangulo extends Figura {
-
+public class Quadrado extends Figura {
     protected Ponto p1,p2;
 
-    public Retangulo(int x1, int y1, int x2, int y2){
+    public Quadrado(int x1, int y1, int x2, int y2){
         this(x1,y1,x2,y2,Color.BLACK,Color.BLACK);
     }
 
-    public Retangulo(int x1, int y1, int x2, int y2, Color corContorno, Color corPreenchimento){
+    public Quadrado(int x1, int y1, int x2, int y2, Color corContorno, Color corPreenchimento){
         super(corContorno,corPreenchimento);
         this.p1 = new Ponto(x1,y1,corContorno);
         this.p2 = new Ponto(x2,y2,corContorno);
     }
 
-    public Retangulo(String s){
+    public Quadrado(String s){
         StringTokenizer quebrador = new StringTokenizer(s,":");
         quebrador.nextToken();
 
@@ -36,8 +33,6 @@ public class Retangulo extends Figura {
         this.corContorno = cor;
     }
 
-
-
     @Override
     public void torneSeVisivel(Graphics g) {
 
@@ -45,15 +40,15 @@ public class Retangulo extends Figura {
         {
             g.setColor(this.corPreenchimento);
             if(p1.getX() < p2.getX() && p1.getY() < p2.getY()){
-                g.fillRect( p1.getX(), p1.getY(), (p2.getX() - p1.getX()), (p2.getY() - p1.getY()));
+                g.fillRect( p1.getX(), p1.getY(), (p2.getX() - p1.getX()), (p2.getX() - p1.getX()));
             }else{
                 if(p1.getX() < p2.getX() && p1.getY() > p2.getY()){
-                    g.fillRect(p1.getX(), p2.getY(), p2.getX() - p1.getX(), p1.getY() - p2.getY());
+                    g.fillRect(p1.getX(), p2.getY(), p2.getX() - p1.getX(), p2.getX() - p1.getX());
                 }else{
                     if(p1.getX() > p2.getX() && p1.getY() < p2.getY()){
-                        g.fillRect(p2.getX(), p1.getY(), p1.getX() - p2.getX(), p2.getY() - p1.getY());
+                        g.fillRect(p2.getX(), p1.getY(), p1.getX() - p2.getX(), p1.getX() - p2.getX());
                     }else{
-                        g.fillRect(p2.getX(), p2.getY(), p1.getX() - p2.getX(), p1.getY() - p2.getY());
+                        g.fillRect(p2.getX(), p2.getY(), p1.getX() - p2.getX(), p1.getX() - p2.getX());
                     }
                 }
             }
@@ -61,18 +56,20 @@ public class Retangulo extends Figura {
         g.setColor(this.corContorno);
 
         if(p1.getX() < p2.getX() && p1.getY() < p2.getY()){
-            g.drawRect( p1.getX(), p1.getY(), (p2.getX() - p1.getX()), (p2.getY() - p1.getY()));
+            g.drawRect( p1.getX(), p1.getY(), (p2.getX() - p1.getX()), (p2.getX() - p1.getX()));
         }else{
             if(p1.getX() < p2.getX() && p1.getY() > p2.getY()){
-                g.drawRect(p1.getX(), p2.getY(), p2.getX() - p1.getX(), p1.getY() - p2.getY());
+                g.drawRect(p1.getX(), p2.getY(), p2.getX() - p1.getX(), p2.getX() - p1.getX());
             }else{
                 if(p1.getX() > p2.getX() && p1.getY() < p2.getY()){
-                    g.drawRect(p2.getX(), p1.getY(), p1.getX() - p2.getX(), p2.getY() - p1.getY());
+                    g.drawRect(p2.getX(), p1.getY(), p1.getX() - p2.getX(), p1.getX() - p2.getX());
                 }else{
-                    g.drawRect(p2.getX(), p2.getY(), p1.getX() - p2.getX(), p1.getY() - p2.getY());
+                    g.drawRect(p2.getX(), p2.getY(), p1.getX() - p2.getX(), p1.getX() - p2.getX());
                 }
             }
         }
+
+
     }
 
     @Override
@@ -97,8 +94,6 @@ public class Retangulo extends Figura {
                 this.getCorPreenchimento().getGreen() +
                 ":" +
                 this.getCorPreenchimento().getBlue();
-
     }
-
 
 }

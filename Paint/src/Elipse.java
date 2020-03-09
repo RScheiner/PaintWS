@@ -74,7 +74,26 @@ public class Elipse extends Figura {
 
     @Override
     public String toString() {
-        return null;
+        return "r:" +
+                this.p1.getX() +
+                ":" +
+                this.p1.getY() +
+                ":" +
+                this.p2.getX() +
+                ":" +
+                this.p2.getY() +
+                ":" +
+                this.getCorContorno().getRed() +
+                ":" +
+                this.getCorContorno().getGreen() +
+                ":" +
+                this.getCorContorno().getBlue() +
+                ":" +
+                this.getCorPreenchimento().getRed() +
+                ":" +
+                this.getCorPreenchimento().getGreen() +
+                ":" +
+                this.getCorPreenchimento().getBlue();
     }
 
 }

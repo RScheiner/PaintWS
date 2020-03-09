@@ -28,8 +28,11 @@ public class Janela extends JFrame
     protected JLabel statusBar1 = new JLabel ("Mensagem:"),
                      statusBar2 = new JLabel ("Coordenada:");
 
-    protected boolean esperaPonto, esperaInicioReta, esperaFimReta, esperaP1Circulo, esperaP2Circulo,
-                      esperaP1Elipse,esperaP2Elipse, esperaP1Retangulo, esperaP2Retangulo;
+    protected boolean esperaPonto, esperaInicioReta, esperaFimReta,
+                      esperaP1Circulo, esperaP2Circulo,
+                      esperaP1Elipse,esperaP2Elipse,
+                      esperaP1Retangulo, esperaP2Retangulo,
+                      esperaP1Quadrado,esperaP2Quardrado;
 
     protected Color corContornoAtual = Color.BLACK;
     protected Color corPreenchimentoAtual =  null;
@@ -174,7 +177,8 @@ public class Janela extends JFrame
         btnLinha.addActionListener      (new DesenhoDeReta ());
         btnCirculo.addActionListener    (new DesenhoDeCirculo());
         btnElipse.addActionListener     (new DesenhoDeElipse());
-        btnRetangulo.addActionListener   (new DesenhoDeRetangulo());
+        btnQuadrado.addActionListener   (new DesenhoQuadrado());
+        btnRetangulo.addActionListener  (new DesenhoDeRetangulo());
         btnCorContorno.addActionListener(new PainelDeCores());
         btnCorCentro.addActionListener  (new PainelDeCoresPreenchimento());
 
@@ -290,13 +294,27 @@ public class Janela extends JFrame
                                         esperaP1Retangulo = false;
                                         esperaP2Retangulo = true;
                                         p1 =  new Ponto(e.getX(),e.getY(), corContornoAtual);
-                                        statusBar1.setText("Mensagem: Clique no ponto final do Quadrado");
+                                        statusBar1.setText("Mensagem: Clique no ponto final do Retangulo");
                                     }else{
                                         if(esperaP2Retangulo){
                                             esperaP2Retangulo = false;
                                             figuras.add(new Retangulo(p1.getX(),p1.getY(),e.getX(),e.getY(),corContornoAtual,corPreenchimentoAtual));
                                             figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
                                             statusBar1.setText("Mensagem:");
+                                        }else{
+                                            if(esperaP1Quadrado){
+                                                esperaP1Quadrado = false;
+                                                esperaP2Quardrado = true;
+                                                p1 =  new Ponto(e.getX(),e.getY(), corContornoAtual);
+                                                statusBar1.setText("Mensagem: Clique no ponto final do Quadrado");
+                                            }else{
+                                                if(esperaP2Quardrado){
+                                                    esperaP2Quardrado = false;
+                                                    figuras.add(new Quadrado(p1.getX(),p1.getY(),e.getX(),e.getY(),corContornoAtual,corPreenchimentoAtual));
+                                                    figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
+                                                    statusBar1.setText("Mensagem:");
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -404,10 +422,30 @@ public class Janela extends JFrame
             esperaP1Retangulo = true;
             esperaP2Retangulo = false;
 
-            statusBar1.setText("Mensagem: clique o ponto inicial do Quadrado");
+            statusBar1.setText("Mensagem: clique o ponto inicial do Retangulo");
         }
     }
 
+    private class DesenhoQuadrado implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            esperaPonto      = false;
+            esperaInicioReta = false;
+            esperaFimReta    = false;
+            esperaP1Circulo  = false;
+            esperaP2Circulo  = false;
+            esperaP1Elipse   = false;
+            esperaP2Elipse   = false;
+            esperaP1Retangulo = false;
+            esperaP2Retangulo = false;
+
+            esperaP1Quadrado = true;
+            esperaP2Quardrado = false;
+
+            statusBar1.setText("Mensagem: clique o ponto inicial do Quadrado");
+        }
+    }
     protected class PainelDeCores extends Component implements ActionListener{
 
         public void actionPerformed(ActionEvent actionEvent) {
@@ -428,4 +466,5 @@ public class Janela extends JFrame
             System.exit(0);
         }
     }
+
 }
