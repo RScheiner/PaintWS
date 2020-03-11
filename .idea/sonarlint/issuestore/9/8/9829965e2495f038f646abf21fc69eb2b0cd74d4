@@ -1,30 +1,32 @@
 
+Ÿ
+java:S1186Ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÅÎ¹8ôƒ±ü‹.
+Ÿ
+java:S1186Í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³¹³˜8ôƒ±ü‹.
+x
+java:S11928"[Define a constant instead of duplicating this literal "Arquivo de imagem ausente" 10 times.(ê€…ï8ôƒ±ü‹.
+V	java:S110"<This class has 6 parents which is greater than 5 authorized.(ë§óıÿÿÿÿ
+K
+java:S1948)")Make "figuras" transient or serializable.(ÁËåƒıÿÿÿÿ8ôƒ±ü‹.
+‡
+java:S1149)"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÁËåƒıÿÿÿÿ8ôƒ±ü‹.
+{
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÁËåƒıÿÿÿÿ8ôƒ±ü‹.
+Ÿ
+java:S1186Ä"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«Æ†8ôƒ±ü‹.
 ¤
-java:S1186©"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ºùüüÿÿÿÿ8ÜéçŠ.
-]
-java:S1161ˆ":Add the "@Override" annotation above this method signature(ãİ‹ëüÿÿÿÿ8ã€ïçŠ.
-`
-java:S1192"JDefine a constant instead of duplicating this literal "Mensagem:" 4 times.(ŸšùÑ
-t
-java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÁËåƒıÿÿÿÿ
-X
-java:S1161æ":Add the "@Override" annotation above this method signature(è­›8ÜéçŠ.
-D
-java:S1948&")Make "figuras" transient or serializable.(ÁËåƒıÿÿÿÿ
-€
-java:S1149&"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(ÁËåƒıÿÿÿÿ
+java:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ºùüüÿÿÿÿ8ôƒ±ü‹.
+?
+java:S1948'"$Make "p1" transient or serializable.(—šÿÿÿÿÿ
+Ÿ
+java:S1186Ğ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Î¦ÿ„8İÎºü‹.
 0
 java:S1220""Move this file to a named package.
-Ÿ
-java:S1186£"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«Æ†8ÜéçŠ.
-Ÿ
-java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(³¹³˜8ÜéçŠ.
-V	java:S110"<This class has 6 parents which is greater than 5 authorized.(ë§óıÿÿÿÿ
-?
-java:S1948$"$Make "p1" transient or serializable.(—šÿÿÿÿÿ
-q
-java:S11925"[Define a constant instead of duplicating this literal "Arquivo de imagem ausente" 10 times.(ê€…ï
-Ÿ
-java:S1186¯"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Î¦ÿ„8ÜéçŠ.
-Ÿ
-java:S1186¦"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÅÎ¹8ÜéçŠ.
+X
+java:S1161ë":Add the "@Override" annotation above this method signature(è­›8ôƒ±ü‹.
+o
+java:S3776ñ"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(Ä·8ôƒ±ü‹.
+]
+java:S1161Ğ":Add the "@Override" annotation above this method signature(ãİ‹ëüÿÿÿÿ8İÎºü‹.
+`
+java:S1192"JDefine a constant instead of duplicating this literal "Mensagem:" 6 times.(ŸšùÑ

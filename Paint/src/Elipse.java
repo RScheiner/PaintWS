@@ -60,14 +60,14 @@ public class Elipse extends Figura {
 
         if(this.corPreenchimento != null){
             g.setColor(this.corPreenchimento);
-            g.fillOval( Math.round(Cx),
-                        Math.round(Cy),
+            g.fillOval( Math.round(Cx) - Math.round(Rx/2),
+                        Math.round(Cy) - Math.round(Ry/2),
                         Math.round(Math.abs(Rx)),
                         Math.round(Math.abs(Ry)));;
         }
         g.setColor(this.corContorno);
-        g.drawOval( Math.round(Cx),
-                    Math.round(Cy),
+        g.drawOval( Math.round(Cx) - Math.round(Rx/2),
+                    Math.round(Cy) - Math.round(Ry/2),
                     Math.round(Math.abs(Rx)),
                     Math.round(Math.abs(Ry)));
     }

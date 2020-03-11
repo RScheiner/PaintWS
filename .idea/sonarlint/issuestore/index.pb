@@ -165,3 +165,7 @@ O
 PaintWS.iml,3\7\3774e76186622c8636828166f5a0d5a5d32af608
 @
 Paint/.classpath,2\9\29294838680c32921e51d1e5b119b82925cf422d
+G
+Paint/src/Quadrado.java,f\1\f131eae0f77487ec3e969a61a928b88ecccecf75
+H
+Paint/src/Retangulo.java,a\c\acd944ef533bdb05bf180890debd006eac196c92

@@ -1,48 +1,46 @@
 
-<
-java:S2185O"&Remove this silly call to "Math.round"(Äó”¸
-0
-java:S1220""Move this file to a named package.
-C
-java:S2185H"&Remove this silly call to "Math.round"(Ïå»í8é²èŠ.
+B
+java:S1481="'Remove this unused "Rx" local variable.(¡Ü ôüÿÿÿÿ
 a
 java:S2184H"DCast one of the operands of this subtraction operation to a "float".(Ïå»í8é²èŠ.
-B
-java:S1481="'Remove this unused "Ry" local variable.(¡Ü ôüÿÿÿÿ
-H
-java:S2185J"&Remove this silly call to "Math.round"(øÑŒˆûÿÿÿÿ8é²èŠ.
-b
-java:S2184Q"GCast one of the operands of this multiplication operation to a "float".(øÑŒˆûÿÿÿÿ
-9
-java:S2225W"Return empty string instead.(¥¹ï8Ï³èŠ.
-i
-java:S2184R"GCast one of the operands of this multiplication operation to a "float".(­¹¢þýÿÿÿÿ8Ï³èŠ.
 A
 java:S2185P"&Remove this silly call to "Math.round"(¾Ò¥”ûÿÿÿÿ
+f
+java:S2184I"DCast one of the operands of this subtraction operation to a "float".(¾Ò¥”ûÿÿÿÿ8é²èŠ.
+H
+java:S2185K"&Remove this silly call to "Math.round"(­¹¢þýÿÿÿÿ8é²èŠ.
 Q
 java:S1854A"6Remove this useless assignment to local variable "Ry".(Í›ÿšüÿÿÿÿ
 i
-java:S2184K"GCast one of the operands of this multiplication operation to a "float".(­¹¢þýÿÿÿÿ8é²èŠ.
-H
-java:S2185I"&Remove this silly call to "Math.round"(¾Ò¥”ûÿÿÿÿ8é²èŠ.
-k	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½á¡´ûÿÿÿÿ
-B
-java:S1481="'Remove this unused "Rx" local variable.(¡Ü ôüÿÿÿÿ
-i
 java:S2184J"GCast one of the operands of this multiplication operation to a "float".(øÑŒˆûÿÿÿÿ8é²èŠ.
-f
-java:S2184I"DCast one of the operands of this subtraction operation to a "float".(¾Ò¥”ûÿÿÿÿ8é²èŠ.
 Z
 java:S2184O"DCast one of the operands of this subtraction operation to a "float".(Äó”¸
+i
+java:S2184R"GCast one of the operands of this multiplication operation to a "float".(­¹¢þýÿÿÿÿ8Ï³èŠ.
 k	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ü ôüÿÿÿÿ
-k	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ü ôüÿÿÿÿ
-H
-java:S2185R"&Remove this silly call to "Math.round"(­¹¢þýÿÿÿÿ8Ï³èŠ.
 A
 java:S2185Q"&Remove this silly call to "Math.round"(øÑŒˆûÿÿÿÿ
+B
+java:S1481="'Remove this unused "Ry" local variable.(¡Ü ôüÿÿÿÿ
+i
+java:S2184K"GCast one of the operands of this multiplication operation to a "float".(­¹¢þýÿÿÿÿ8é²èŠ.
+k	java:S117C"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½á¡´ûÿÿÿÿ
+k	java:S117="QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ü ôüÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+H
+java:S2185R"&Remove this silly call to "Math.round"(­¹¢þýÿÿÿÿ8Ï³èŠ.
+H
+java:S2185J"&Remove this silly call to "Math.round"(øÑŒˆûÿÿÿÿ8é²èŠ.
 _
 java:S2184P"DCast one of the operands of this subtraction operation to a "float".(¾Ò¥”ûÿÿÿÿ
+C
+java:S2185H"&Remove this silly call to "Math.round"(Ïå»í8é²èŠ.
+<
+java:S2185O"&Remove this silly call to "Math.round"(Äó”¸
+b
+java:S2184Q"GCast one of the operands of this multiplication operation to a "float".(øÑŒˆûÿÿÿÿ
 L
 java:S1854@"6Remove this useless assignment to local variable "Rx".(²Üàå
 H
-java:S2185K"&Remove this silly call to "Math.round"(­¹¢þýÿÿÿÿ8é²èŠ.
+java:S2185I"&Remove this silly call to "Math.round"(¾Ò¥”ûÿÿÿÿ8é²èŠ.

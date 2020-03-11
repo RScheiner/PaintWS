@@ -1,29 +1,27 @@
 
-0
-java:S1220""Move this file to a named package.
-]	java:S125;"<This block of commented-out lines of code should be removed.(ÈÌßšùÿÿÿÿ8€¤ƒéŠ.
-m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
-f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
-H
-java:S2185@"&Remove this silly call to "Math.round"(ŠÙý øÿÿÿÿ8Õß„êŠ.
-<
-java:S2185G"&Remove this silly call to "Math.round"(Á¨ä¤
-H
-java:S2185F"&Remove this silly call to "Math.round"(ŠÙý øÿÿÿÿ8ÃƒÂçŠ.
-9
-java:S2225M"Return empty string instead.(¥¹ï8ðÄ³ÞŠ.
-f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
-]	java:S1254"<This block of commented-out lines of code should be removed.(ØÄ¨žùÿÿÿÿ8ï½ûèŠ.
-C
-java:S2185?"&Remove this silly call to "Math.round"(€âî³8Õß„êŠ.
-A
-java:S2185H"&Remove this silly call to "Math.round"(…ÁŽÖÿÿÿÿÿ
-C
-java:S2185B"&Remove this silly call to "Math.round"(â²Ÿ 8Õß„êŠ.
 C
 java:S2185A"&Remove this silly call to "Math.round"(Á¨ä¤8Õß„êŠ.
-9
-java:S1116B"Remove this empty statement.(â²Ÿ 8Õß„êŠ.
 C
 java:S2185E"&Remove this silly call to "Math.round"(¨¨ƒ8ÃƒÂçŠ.
+H
+java:S2185@"&Remove this silly call to "Math.round"(ŠÙý øÿÿÿÿ8Õß„êŠ.
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
+]	java:S125;"<This block of commented-out lines of code should be removed.(ÈÌßšùÿÿÿÿ8€¤ƒéŠ.
+0
+java:S1220""Move this file to a named package.
+C
+java:S2185?"&Remove this silly call to "Math.round"(€âî³8Õß„êŠ.
+C
+java:S2185B"&Remove this silly call to "Math.round"(â²Ÿ 8Õß„êŠ.
 m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+]	java:S1254"<This block of commented-out lines of code should be removed.(ØÄ¨žùÿÿÿÿ8ï½ûèŠ.
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+9
+java:S1116B"Remove this empty statement.(â²Ÿ 8Õß„êŠ.
+H
+java:S2185F"&Remove this silly call to "Math.round"(ŠÙý øÿÿÿÿ8ÃƒÂçŠ.
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
+<
+java:S2185G"&Remove this silly call to "Math.round"(Á¨ä¤
+A
+java:S2185H"&Remove this silly call to "Math.round"(…ÁŽÖÿÿÿÿÿ
