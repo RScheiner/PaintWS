@@ -1,27 +1,43 @@
 
-C
-java:S2185A"&Remove this silly call to "Math.round"(Á¨ä¤8Õß„êŠ.
-C
-java:S2185E"&Remove this silly call to "Math.round"(¨¨ƒ8ÃƒÂçŠ.
+c
+java:S2184@"ACast one of the operands of this division operation to a "float".(‡„È¾ıÿÿÿÿ8ñ•à·Œ.
 H
-java:S2185@"&Remove this silly call to "Math.round"(ŠÙı øÿÿÿÿ8Õß„êŠ.
-f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
-]	java:S125;"<This block of commented-out lines of code should be removed.(ÈÌßšùÿÿÿÿ8€¤ƒéŠ.
+java:S2185?"&Remove this silly call to "Math.round"(ñÿæ±şÿÿÿÿ8Õß„êŠ.
+]
+java:S2184E"ACast one of the operands of this division operation to a "float".(äĞ°!8–ìá·Œ.
+c
+java:S2184F"ACast one of the operands of this division operation to a "float".(‡„È¾ıÿÿÿÿ8–ìá·Œ.
 0
 java:S1220""Move this file to a named package.
+H
+java:S2185@"&Remove this silly call to "Math.round"(‡„È¾ıÿÿÿÿ8Õß„êŠ.
+A
+java:S2185H"&Remove this silly call to "Math.round"(…ÁÖÿÿÿÿÿ
+]	java:S125;"<This block of commented-out lines of code should be removed.(ÈÌßšùÿÿÿÿ8€¤ƒéŠ.
 C
-java:S2185?"&Remove this silly call to "Math.round"(€âî³8Õß„êŠ.
-C
-java:S2185B"&Remove this silly call to "Math.round"(â²Ÿ 8Õß„êŠ.
-m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
-]	java:S1254"<This block of commented-out lines of code should be removed.(ØÄ¨ùÿÿÿÿ8ï½ûèŠ.
-m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+java:S2185A"&Remove this silly call to "Math.round"(Á¨ä¤8Õß„êŠ.
+B
+java:S2185E"&Remove this silly call to "Math.round"(äĞ°!8–ìá·Œ.
+B
+java:S2185E"&Remove this silly call to "Math.round"(äĞ°!8ÃƒÂçŠ.
+f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
+H
+java:S2185@"&Remove this silly call to "Math.round"(‡„È¾ıÿÿÿÿ8éÇÜ·Œ.
 9
 java:S1116B"Remove this empty statement.(â²Ÿ 8Õß„êŠ.
 H
-java:S2185F"&Remove this silly call to "Math.round"(ŠÙı øÿÿÿÿ8ÃƒÂçŠ.
+java:S2185F"&Remove this silly call to "Math.round"(‡„È¾ıÿÿÿÿ8–ìá·Œ.
+H
+java:S2185F"&Remove this silly call to "Math.round"(‡„È¾ıÿÿÿÿ8–ìá·Œ.
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+H
+java:S2185?"&Remove this silly call to "Math.round"(ñÿæ±şÿÿÿÿ8À‰Ü·Œ.
 f	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰
-<
-java:S2185G"&Remove this silly call to "Math.round"(Á¨ä¤
-A
-java:S2185H"&Remove this silly call to "Math.round"(…ÁÖÿÿÿÿÿ
+C
+java:S2185B"&Remove this silly call to "Math.round"(â²Ÿ 8Õß„êŠ.
+]	java:S1254"<This block of commented-out lines of code should be removed.(ØÄ¨ùÿÿÿÿ8ï½ûèŠ.
+C
+java:S2185G"&Remove this silly call to "Math.round"(Á¨ä¤8–ìá·Œ.
+m	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°Ñ’‰8áµÂçŠ.
+c
+java:S2184?"ACast one of the operands of this division operation to a "float".(ñÿæ±şÿÿÿÿ8ãáß·Œ.

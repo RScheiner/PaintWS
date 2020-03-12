@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.imageio.*;
+import javax.swing.text.StyledEditorKit;
 import java.io.*;
 import java.util.*;
  
@@ -13,11 +14,13 @@ public class Janela extends JFrame
                       btnLinha           = new JButton ("Linha"),
                       btnCirculo         = new JButton ("Circulo"),
                       btnElipse          = new JButton ("Elipse"),
-                      btnRetangulo       = new JButton("Retangulo"),
-                      btnQuadrado        = new JButton("Quadrado"),
-                      btnPoligono        = new JButton("Poligono"),
+                      btnRetangulo       = new JButton ("Retangulo"),
+                      btnQuadrado        = new JButton ("Quadrado"),
+                      btnPoligono        = new JButton ("Poligono"),
+                      btnTexto           = new JButton ("Texto"),
+                      btnFonte           = new JButton ("Fonte"),
                       btnCorContorno     = new JButton ("Contorno"),
-                      btnCorCentro       = new JButton("Preenchimento"),
+                      btnCorCentro       = new JButton ("Preenchimento"),
                       btnAbrir           = new JButton ("Abrir"),
                       btnSalvar          = new JButton ("Salvar"),
                       btnApagar          = new JButton ("Apagar"),
@@ -32,10 +35,14 @@ public class Janela extends JFrame
                       esperaP1Circulo, esperaP2Circulo,
                       esperaP1Elipse,esperaP2Elipse,
                       esperaP1Retangulo, esperaP2Retangulo,
-                      esperaP1Quadrado,esperaP2Quardrado;
+                      esperaP1Quadrado,esperaP2Quardrado,
+                      esperaTexto;
 
     protected Color corContornoAtual = Color.BLACK;
     protected Color corPreenchimentoAtual =  null;
+    protected Font  fonteDoTexto = new Font("TimesRoman", Font.PLAIN, 10);
+
+
     protected Ponto p1;
     
     protected Vector<Figura> figuras = new Vector<Figura>();
@@ -181,11 +188,12 @@ public class Janela extends JFrame
         btnRetangulo.addActionListener  (new DesenhoDeRetangulo());
         btnCorContorno.addActionListener(new PainelDeCores());
         btnCorCentro.addActionListener  (new PainelDeCoresPreenchimento());
-
+        btnTexto.addActionListener      (new Texto());
+        btnFonte.addActionListener      (new EscolherFonte());
 
         JPanel     pnlBotoes = new JPanel();
-        FlowLayout flwBotoes = new FlowLayout(); 
-        pnlBotoes.setLayout (flwBotoes);
+        GridLayout grdBotoes = new GridLayout(2,10);
+        pnlBotoes.setLayout (grdBotoes);
 
         pnlBotoes.add (btnAbrir);
         pnlBotoes.add (btnSalvar);
@@ -222,7 +230,7 @@ public class Janela extends JFrame
 
     protected class MeuJPanel extends    JPanel 
                               implements MouseListener,
-                                         MouseMotionListener
+                                         MouseMotionListener, KeyListener
     {
 	public MeuJPanel()
         {
@@ -313,6 +321,13 @@ public class Janela extends JFrame
                                                     figuras.add(new Quadrado(p1.getX(),p1.getY(),e.getX(),e.getY(),corContornoAtual,corPreenchimentoAtual));
                                                     figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
                                                     statusBar1.setText("Mensagem:");
+                                                }else{
+                                                    if(esperaTexto){
+                                                        esperaTexto = false;
+                                                        figuras.add(new TextoPainel(e.getX(),e.getY(),corPreenchimentoAtual));
+                                                        figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
+                                                        statusBar1.setText("Mensagem:");
+                                                    }
                                                 }
                                             }
                                         }
@@ -339,6 +354,21 @@ public class Janela extends JFrame
         public void mouseMoved(MouseEvent e)
         {
             statusBar2.setText("Coordenada: "+e.getX()+","+e.getY());
+        }
+
+        @Override
+        public void keyTyped(KeyEvent keyEvent) {
+
+        }
+
+        @Override
+        public void keyPressed(KeyEvent keyEvent) {
+
+        }
+
+        @Override
+        public void keyReleased(KeyEvent keyEvent) {
+
         }
     }
 
@@ -446,6 +476,35 @@ public class Janela extends JFrame
             statusBar1.setText("Mensagem: clique o ponto inicial do Quadrado");
         }
     }
+
+    private class Texto implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            esperaPonto      = false;
+            esperaInicioReta = false;
+            esperaFimReta    = false;
+            esperaP1Circulo  = false;
+            esperaP2Circulo  = false;
+            esperaP1Elipse   = false;
+            esperaP2Elipse   = false;
+            esperaP1Retangulo = false;
+            esperaP2Retangulo = false;
+
+            esperaTexto = true;
+
+            statusBar1.setText("Mensagem: clique onde gostaria de digitar");
+        }
+    }
+
+
+    private class EscolherFonte implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+
+            //fonteDoTexto = JFontChooser.showDialog(this,"Esolha a Fonte","TimesRoman");
+        }
+    }
+
     protected class PainelDeCores extends Component implements ActionListener{
 
         public void actionPerformed(ActionEvent actionEvent) {
@@ -459,6 +518,7 @@ public class Janela extends JFrame
             corPreenchimentoAtual = JColorChooser.showDialog(this,"Escolha a Cor",Color.BLACK);
         }
     }
+
     protected class FechamentoDeJanela extends WindowAdapter
     {
         public void windowClosing (WindowEvent e)
@@ -466,5 +526,6 @@ public class Janela extends JFrame
             System.exit(0);
         }
     }
+
 
 }
