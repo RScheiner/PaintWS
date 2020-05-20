@@ -1,3 +1,5 @@
+import com.ozten.font.JFontChooser;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -36,15 +38,19 @@ public class Janela extends JFrame
                       esperaP1Elipse,esperaP2Elipse,
                       esperaP1Retangulo, esperaP2Retangulo,
                       esperaP1Quadrado,esperaP2Quardrado,
-                      esperaTexto;
+                      esperaTexto,esperaP1Poligono,esperaPNPoligono;
 
     protected Color corContornoAtual = Color.BLACK;
     protected Color corPreenchimentoAtual =  null;
-    protected Font  fonteDoTexto = new Font("TimesRoman", Font.PLAIN, 10);
-
+    protected Font  fonteDoTexto = null;
 
     protected Ponto p1;
-    
+
+    protected ArrayList<Integer> coodernadasX = new ArrayList<Integer>();
+    protected ArrayList<Integer> coodernadasY = new ArrayList<Integer>();
+    protected int count=0;
+
+
     protected Vector<Figura> figuras = new Vector<Figura>();
 
     public Janela ()
@@ -186,9 +192,10 @@ public class Janela extends JFrame
         btnElipse.addActionListener     (new DesenhoDeElipse());
         btnQuadrado.addActionListener   (new DesenhoQuadrado());
         btnRetangulo.addActionListener  (new DesenhoDeRetangulo());
+        btnPoligono.addActionListener   (new DesenhoDePoligono());
         btnCorContorno.addActionListener(new PainelDeCores());
         btnCorCentro.addActionListener  (new PainelDeCoresPreenchimento());
-        btnTexto.addActionListener      (new Texto());
+        btnTexto.addActionListener      (new TextoTela());
         btnFonte.addActionListener      (new EscolherFonte());
 
         JPanel     pnlBotoes = new JPanel();
@@ -204,6 +211,8 @@ public class Janela extends JFrame
         pnlBotoes.add (btnQuadrado);
         pnlBotoes.add (btnRetangulo);
         pnlBotoes.add (btnPoligono);
+        pnlBotoes.add (btnTexto);
+        pnlBotoes.add (btnFonte);
         pnlBotoes.add (btnCorContorno);
         pnlBotoes.add (btnCorCentro);
         pnlBotoes.add (btnApagar);
@@ -324,9 +333,27 @@ public class Janela extends JFrame
                                                 }else{
                                                     if(esperaTexto){
                                                         esperaTexto = false;
-                                                        figuras.add(new TextoPainel(e.getX(),e.getY(),corPreenchimentoAtual));
+                                                        figuras.add(new Texto(e.getX(),e.getY(),corPreenchimentoAtual, fonteDoTexto));
                                                         figuras.get(figuras.size()-1).torneSeVisivel(pnlDesenho.getGraphics());
                                                         statusBar1.setText("Mensagem:");
+                                                    }else{
+                                                        if(esperaP1Poligono) {
+                                                            p1 = new Ponto(e.getX(), e.getY(), corContornoAtual);
+                                                            if ((((MouseEvent) e).getButton() != 3)) {
+                                                                count++;
+                                                                coodernadasX.add(p1.getX());
+                                                                coodernadasY.add(p1.getY());
+
+                                                            } else {
+                                                                count++;
+                                                                coodernadasX.add(p1.getX());
+                                                                coodernadasY.add(p1.getY());
+                                                                figuras.add(new Poligono(coodernadasX, coodernadasY, count, corContornoAtual, corPreenchimentoAtual));
+                                                                figuras.get(figuras.size() - 1).torneSeVisivel(pnlDesenho.getGraphics());
+                                                                esperaP1Poligono = false;
+                                                                count = 0;
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
@@ -337,10 +364,19 @@ public class Janela extends JFrame
         }
         
         public void mouseReleased (MouseEvent e)
-        {}
-        
+        {
+
+        }
+
+        public void mouseMoved(MouseEvent e)
+        {
+            statusBar2.setText("Coordenada: "+e.getX()+","+e.getY());
+        }
+
         public void mouseClicked (MouseEvent e)
-        {}
+        {
+
+        }
         
         public void mouseEntered (MouseEvent e)
         {}
@@ -351,10 +387,7 @@ public class Janela extends JFrame
         public void mouseDragged(MouseEvent e)
         {}
 
-        public void mouseMoved(MouseEvent e)
-        {
-            statusBar2.setText("Coordenada: "+e.getX()+","+e.getY());
-        }
+
 
         @Override
         public void keyTyped(KeyEvent keyEvent) {
@@ -477,7 +510,7 @@ public class Janela extends JFrame
         }
     }
 
-    private class Texto implements ActionListener {
+    private class TextoTela implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             esperaPonto      = false;
@@ -495,13 +528,30 @@ public class Janela extends JFrame
             statusBar1.setText("Mensagem: clique onde gostaria de digitar");
         }
     }
+    private class DesenhoDePoligono implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            esperaPonto      = false;
+            esperaInicioReta = false;
+            esperaFimReta    = false;
+            esperaP1Circulo  = false;
+            esperaP2Circulo  = false;
+            esperaP1Elipse   = false;
+            esperaP2Elipse   = false;
+            esperaP1Retangulo = false;
+            esperaP2Retangulo = false;
+            esperaTexto = false;
 
+            esperaP1Poligono = true;
+            coodernadasX.clear();
+            coodernadasY.clear();
+        }
+    }
 
-    private class EscolherFonte implements ActionListener {
+    private class EscolherFonte extends Component implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-
-            //fonteDoTexto = JFontChooser.showDialog(this,"Esolha a Fonte","TimesRoman");
+            fonteDoTexto = JFontChooser.showDialog(this,"Esolha a Fonte","Teste de Fonte");
         }
     }
 
